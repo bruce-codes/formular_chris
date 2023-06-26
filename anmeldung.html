@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sprachkurs</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="#">Home</a>
+    <a class="navbar-brand" href="#">Anmeldung</a>
+    <a class="navbar-brand" href="#">Kontakt</a>
+  </nav>
+
+<div class="container">
+  <h2>Anmeldeformular </h2>
+
+
+<form
+    id="anmeldeform"
+    action="./result.html"
+    method="GET"
+    onsubmit="updateResult()"
+  >
+    
+    <div class="form-group">
+      <label for="vorname">Vorname:</label>
+      <input type="text" class="form-control" id="vorname" placeholder="Enter Vorname" name="vorname" required>
+    </div>
+    <div class="form-group">
+      <label for="nachname">Nachname:</label>
+      <input type="text" class="form-control" id="nachname" placeholder="Enter Nachname" name="nachname" required>
+    </div>
+    <div class="form-group">
+        <label for="strasse">Strasse:</label>
+        <input type="text" class="form-control" id="strasse" placeholder="Enter Strasse" name="strasse" required>
+    </div>
+    <div class="form-group">
+        <label for="platz">Platz:</label>
+        <input type="number" class="form-control" id="platz" placeholder="Enter Platz" name="platz" required>
+    </div>
+    <div class="form-group">
+        <label for="ort">Ort:</label>
+        <input type="text" class="form-control" id="ort" placeholder="Enter Ort" name="ort">
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+        <label for="tel">Tel:</label>
+        <input type="number" class="form-control" id="tel" placeholder="Enter Tel" name="tel" min="2" max="3">
+        
+    </div>
+
+
+    <div class="checkbox">
+        <label><input type="checkbox" name="remember">Ich bin neu Kunde</label>
+    </div>
+
+     
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+ 
+
+
+
+
+
+  <script src="main.js">
+
+
+  </script>
+  
+
+</body>
+</html>
