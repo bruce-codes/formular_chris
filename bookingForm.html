@@ -12,66 +12,87 @@
 
 <div class="container">
   <h2>Anmeldeformular </h2>
-  <form action="/action_page.php">
+
+
+<form
+    id="anmeldeform"
+    action="./result.html"
+    method="GET"
+    onsubmit="updateResult()"
+  >
     
     <div class="form-group">
-      <label for="email">Vorname:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter Vorname" name="email">
+      <label for="vorname">Vorname:</label>
+      <input type="text" class="form-control" id="vorname" placeholder="Enter Vorname" name="vorname" required>
     </div>
     <div class="form-group">
-      <label for="pwd">Nachname:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter Nachname" name="pwd">
+      <label for="nachname">Nachname:</label>
+      <input type="text" class="form-control" id="nachname" placeholder="Enter Nachname" name="nachname" required>
     </div>
-
-
     <div class="form-group">
-        <label for="email">Strasse:</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter Strasse" name="email">
-      </div>
-      <div class="form-group">
-        <label for="pwd">Platz:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter Platz" name="pwd">
-      </div>
-      <div class="form-group">
-        <label for="email">Ort:</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter Ort" name="email">
-      </div>
-      <div class="form-group">
+        <label for="strasse">Strasse:</label>
+        <input type="text" class="form-control" id="strasse" placeholder="Enter Strasse" name="strasse" required>
+    </div>
+    <div class="form-group">
+        <label for="platz">Platz:</label>
+        <input type="number" class="form-control" id="platz" placeholder="Enter Platz" name="platz" required>
+    </div>
+    <div class="form-group">
+        <label for="ort">Ort:</label>
+        <input type="text" class="form-control" id="ort" placeholder="Enter Ort" name="ort">
+    </div>
+    <div class="form-group">
         <label for="email">Email:</label>
         <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-      </div>
-      <div class="form-group">
-        <label for="email">Tel:</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter Tel" name="email">
-      </div>
-
-  
-      <div>
-    <form action="/action_page.php">
-      <label for="birthday">Birthday:</label>
-      <input type="date" id="birthday" name="birthday">
-      <input type="submit">
-    </form>
+    </div>
+    <div class="form-group">
+        <label for="tel">Tel:</label>
+        <input type="number" class="form-control" id="tel" placeholder="Enter Tel" name="tel">
     </div>
 
-      <div class="checkbox">
-    <label><input type="checkbox" name="remember">Ich bin neu Kunde</label>
-  </div>
 
+    <div class="checkbox">
+        <label><input type="checkbox" name="remember">Ich bin neu Kunde</label>
+    </div>
+
+     
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-</div>
+ 
 
-<div class="container mt-3">
-   
-    <form action="/action_page.php">
-      <div class="mb-3 mt-3">
-        <label for="comment">Comments:</label>
-        <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  </div>
 
+
+
+
+  <script src="main.js">
+
+    function updateResult () {
+      event.preventDefault ();
+      validate ()
+    }
+
+    var message=""
+
+    function validate () {
+      letOrtInput = document.getElementById("ort").value;
+
+      if (ortInput.length <6)
+      message = "minimum 6 zahlen hinschrieben- ansonstan wird ihr formular nicht weitergeleitet!!!!!!"
+
+      document.getElementById("error-message-container").innerHTML = 
+      message
+
+      else {
+          document.getElementById("error-message-container").innerHTML = "richtig!";
+        }
+
+      
+    }
+
+
+
+  </script>
+  
 
 </body>
 </html>
