@@ -2,20 +2,38 @@ p {
     color: rgb(52, 38, 38)
 }
 
-
-
-
 h4 {
     color: rgb(117, 117, 235)
 }
-
-
-
 
 body {
     background-color: rgb(194, 214, 248);
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
+.form {
+    margin-top: 15px;
+}
 
+.grid-index {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 400px;
+    margin-right: 300px;
+    margin-top: 15px;
+}
 
+.kontakt {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 15px;
+    margin-left: 200px;
+}
+
+.submit {
+    margin-top: 15px;
+}
